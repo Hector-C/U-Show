@@ -1,8 +1,9 @@
-.parallax{
-
-
-    background: url("https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiS14_HyKzcAhVtFzQIHZclCFsQjRx6BAgBEAU&url=http%3A%2F%2Fstep-ahead.info%2F23%2F4922814-movie-wallpapers-and-backgrounds.html&psig=AOvVaw2wl-OZaaf09Q5cdbelfM7v&ust=1532137856394698");
-    background-size: cover;
+body {
+    background-color: rgb(0, 0, 0);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     background-attachment: fixed;
-    height: 319px;
 }
+body-1 {
+    color: green;

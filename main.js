@@ -11,8 +11,8 @@ var cardTemplate = function(pictures, movieName, genre, rot, des ){
             <p class="card-text"> ${genre}</p>
             <p class="card-text"> ${rot}</p>
             <p class="card-text"> ${des}</p>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
+          
+            </div>
         </div>
     </div>
       `;
@@ -23,7 +23,7 @@ var cardTemplate = function(pictures, movieName, genre, rot, des ){
 $.getJSON( airtable_list_url, function( data ) {
     var items = [];
     $.each( data.records, function( key, val ) {
-      // console.log(val.fields)
+      console.log(val.fields)
       var movieName = val.fields['movieName'];
       var genre = val.fields['genre'];
       var des = val.fields['des']

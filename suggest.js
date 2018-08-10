@@ -1,14 +1,20 @@
 $("#submit-suggestion").on('submit', function(e){
-    console.log(val.fields);
+    //console.log("testing");
     e.preventDefault();
+
     var data = {};
     data.fields = {
-      'Name:': $(this).find('#MovieName').val(),
+      'MovieName:': $(this).find('#MovieName').val(),
       'Genre(s):': $(this).find('#Genre').val(),
       'Description:': $(this).find('#Description').val(),
-      'Rotten Tomatoes Score:': $(this).find('#RottenTomatoes').val(),
+      'RottenTomatoes:': $(this).find('#RottenTomatoes').val(),
+      'Pictures': [
+        {
+          'url': $(this).find('#Picture').val()
+        }
+      ],
     };
-    console.log(val.fields);
+    console.log(data.fields);
     $.post(`https://api.airtable.com/v0/app4SzizTALXtwnZi/Table%201?api_key=keyzo1ZJc5pLQgBEq`,
     data, function () {
       // On Success

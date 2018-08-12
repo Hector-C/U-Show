@@ -24,7 +24,7 @@ $.getJSON( airtable_list_url, function( data ) {
     var items = [];
     $.each( data.records, function( key, val ) {
     console.log(val.fields);
-    var photos = val.fields['Photos'][0] ? val.fields['Photos'][0].url : null;
+      var photos = val.fields['Photos'][0] ? val.fields['Photos'][0].url : null;
       var moviename = val.fields['MovieName'];
       var genre = val.fields['Genre'];
       var description = val.fields['Description'];

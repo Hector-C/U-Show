@@ -8,7 +8,7 @@ var cardTemplate = function(photos, MovieName, Genre, RottenTomatoes, Descriptio
         <div class="card">
           <div class="card-body">
           <img class="card-img-top" src="${photos}" style="width:60%">
-            <h5 class="card-title">${MovieName}</h5>
+            <h5 class="card-title">${name}</h5>
             <p class="card-text"> ${Genre}</p>
             <p class="card-text"> ${RottenTomatoes}</p>
             <p class="card-text"> ${Description}</p>
@@ -25,7 +25,7 @@ $.getJSON( airtable_list_url, function( data ) {
     $.each( data.records, function( key, val ) {
     console.log(val.fields);
       var photos = val.fields['Photos'][0] ? val.fields['Photos'][0].url : null;
-      var moviename = val.fields['MovieName'];
+      var Name = val.fields['MovieName'];
       var genre = val.fields['Genre'];
       var description = val.fields['Description'];
       var rottentomatoes = val.fields['RottenTomatoes'];

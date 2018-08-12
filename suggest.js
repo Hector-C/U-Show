@@ -4,10 +4,10 @@ $("#submit-suggestion").on('submit', function(e){
 
     var data = {};
     data.fields = {
-      'MovieName:': $(this).find('#MovieName').val(),
-      'Genre(s):': $(this).find('#Genre').val(),
-      'Description:': $(this).find('#Description').val(),
-      'RottenTomatoes:': $(this).find('#RottenTomatoes').val(),
+      'MovieName': $(this).find('#MovieName').val(),
+      'Genre(s)': $(this).find('#Genre').val(),
+      'Description': $(this).find('#Description').val(),
+      'RottenTomatoes': $(this).find('#RottenTomatoes').val(),
       'Pictures': [
         {
           'url': $(this).find('#Picture').val()

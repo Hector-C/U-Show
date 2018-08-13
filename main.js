@@ -36,3 +36,4 @@ $.getJSON( airtable_list_url, function( data ) {
     $(".list-view").append(items.join(''));
   });
   
+// Keep all the variables the same when it comes to the blue words.

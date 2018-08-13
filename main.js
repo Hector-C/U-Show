@@ -1,7 +1,7 @@
 //This url is from airtable from the Authentication section
 var airtable_list_url = 'https://api.airtable.com/v0/app4SzizTALXtwnZi/Table%201?api_key=keyzo1ZJc5pLQgBEq'
 
-var cardTemplate = function(photos, name, Genre, RottenTomatoes, Description){
+var cardTemplate = function(photos, name, genre, rottentomatoes, description){
     return  `
     <div class="card-deck">
     
@@ -9,9 +9,9 @@ var cardTemplate = function(photos, name, Genre, RottenTomatoes, Description){
           <div class="card-body">
           <img class="card-img-top" src="${photos}" style="width:60%">
             <h5 class="card-title">${name}</h5>
-            <p class="card-text"> ${Genre}</p>
-            <p class="card-text"> ${RottenTomatoes}</p>
-            <p class="card-text"> ${Description}</p>
+            <p class="card-text"> ${genre}</p>
+            <p class="card-text"> ${rottentomatoes}</p>
+            <p class="card-text"> ${description}</p>
           
             </div>
         </div>
@@ -26,7 +26,7 @@ $.getJSON( airtable_list_url, function( data ) {
     console.log(val.fields);
       var photos = val.fields['Photos'] ? val.fields['Photos'][0].url : null;
       var name = val.fields['MovieName'];
-      var genre = val.fields['Genre'];
+      var genre = val.fields['Genre(s)'];
       var description = val.fields['Description'];
       var rottentomatoes = val.fields['RottenTomatoes'];
       var html = cardTemplate(photos, name, genre, rottentomatoes, description);

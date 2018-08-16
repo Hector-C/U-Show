@@ -9,9 +9,9 @@ $("#submit-suggestion").on('submit', function(e){
       'Rating': $(this).find('#Rating').val(),
       'Description': $(this).find('#Description').val(),
       'RottenTomatoes': $(this).find('#RottenTomatoes').val(),
-      'Pictures': [
+      'Photos': [
         {
-          'url': $(this).find('#Picture').val()
+          'url': $(this).find('#Photos').val()
         }
       ],
     };

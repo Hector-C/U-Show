@@ -6,6 +6,7 @@ $("#submit-suggestion").on('submit', function(e){
     data.fields = {
       'MovieName': $(this).find('#MovieName').val(),
       'Genre(s)': $(this).find('#Genre').val(),
+      'Rating': $(this).find('#Rating').val(),
       'Description': $(this).find('#Description').val(),
       'RottenTomatoes': $(this).find('#RottenTomatoes').val(),
       'Pictures': [
@@ -14,11 +15,8 @@ $("#submit-suggestion").on('submit', function(e){
         }
       ],
     };
-    //console.log(data.fields);
     $.post(`https://api.airtable.com/v0/app4SzizTALXtwnZi/Table%201?api_key=keyzo1ZJc5pLQgBEq`,
     data, function () {
-      // On Success
-      //console.log(val.fields);
       $("#submit-suggestion").html(`<h2>Thanks for your suggestion!</h2>`);
     }
   );

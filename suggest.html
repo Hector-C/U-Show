@@ -23,9 +23,18 @@
             <input required type="text" class="form-control" id="MovieName">
           </div>
           <div class="form-group">
-                <label for="Genre">Genre(s):</label>
-                <input required type="text" class="form-control" id="Genre">
-              </div>
+              <label for="Genre">Genre(s):</label>
+              <select class="form-control" id="Genre"
+                <option>Action</option>
+                <option>Romance</option>
+                <option>Horror</option>
+                <option>Adventure</option>
+                <option>Comedy</option>
+                <option>Satirical</option>
+                <option>Family friendly</option>
+                <option>Family friendly, Comedy</option>
+              </select>
+            </div>
               <div class="form-group">
                     <label for="Description">Description:</label>
                     <input required type="text" class="form-control" id="Description">
@@ -35,8 +44,12 @@
                         <input required type="text" class="form-control" id="RottenTomatoes">
                       </div>
                       <div class="form-group">
-                            <label for="Photos">Picture URL</label>
+                            <label for="Photos">Picture URL:</label>
                             <input required type="url" class="form-control" id="Photos">
+                          </div>
+                          <div class="form-group">
+                            <label for="Rating">Rating:</label>
+                            <input required type="text" class="form-control" id="Rating">
                           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
